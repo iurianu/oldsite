@@ -1,0 +1,39 @@
+$.noConflict();
+jQuery(document).ready(function(){
+	jQuery("a#green").click(function(){
+		jQuery("#canvas").load("projects/green.html");
+	});
+	jQuery("a#golfmanager").click(function(){
+		jQuery("#canvas").load("projects/golf-manager.html");
+	});
+	jQuery("a#personal").click(function(){
+		jQuery("#canvas").load("projects/personal.html");
+	});
+	jQuery("a#business").click(function(){
+		jQuery("#canvas").load("projects/business.html");
+	});
+	jQuery("a#resume").click(function(){
+		jQuery("#canvas").load("projects/resume-responsive.html");
+	});
+	jQuery("a#apps").click(function(){
+		jQuery("#canvas").load("projects/dublin-apps.html");
+	});
+	jQuery("a#irc").click(function(){
+		jQuery("#canvas").load("projects/irc-tiles.html");
+	});	
+	jQuery("a#castlot").click(function(){
+		jQuery("#canvas").load("projects/castlot.html");
+	});	
+	jQuery("a#monetago").click(function(){
+		jQuery("#canvas").load("projects/monetago.html");
+	});
+	jQuery("a#mizunokotoba").click(function(){
+		jQuery("#canvas").load("projects/mizunokotoba.html");
+	});
+	jQuery("a#inthepool").click(function(){
+		jQuery("#canvas").load("projects/inthepool.html");
+	});
+	jQuery("a#chemwatch").click(function(){
+		jQuery("#canvas").load("projects/chemwatch.html");
+	});
+});

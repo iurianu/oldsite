@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Webpage">
+	<head>
+
+		<!-- HTML META TAGS -->
+		<meta http-equiv="X-UA-Compatible" 		content="IE=edge">
+		<meta http-equiv="content-type" 		content="text/html; charset=UTF-8">
+		<meta name="viewport" 					content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="HandheldFriendly" 			content="true">
+		<meta name="author" 					content="Iulian Andriescu">
+		<meta name="description" 				content="Article: Javascript | HTML">
+		<meta name="keywords" 					content="iurianu, HTML5, CSS3, SASS, SCSS, JavaScript, jQuery, User Experience, Interaction Design, Application Development, CSS, HTML, Mobile/Multidevice">
+		<meta name="robots"						content="index, follow">
+
+		<title>Use Radio Input to Change Content</title>
+
+		<!-- PROFILE DESCRIPTION -->
+		<link rel="author" 			href="https://plus.google.com/103842049134044348018/">
+		<link rel="profile" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="publisher" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="icon" 			href="../images/favicon.png" type="image/png" itemprop="primaryImageOfPage">
+		<link rel="shortcut icon" 	href="../images/favicon.png" type="image/png" itemprop="image">
+		<meta name="twitter:card"				content="summary_large_image">
+		<meta name="twitter:title" 				content="Iulian Andriescu - Web Development">
+		<meta name="twitter:creator" 			content="Iulian Andriescu">
+		<meta name="twitter:site" 				content="http://iurianu.info">
+		<meta name="twitter:image" 				content="http://iurianu.info/img/ia.jpg">
+		<meta name="twitter:description" 		content="Web Development: HTML5, CSS3, SASS/SCSS, JavaScript, jQuery">
+		<meta property="og:image" 			content="http://iurianu.info/img/ia.jpg">
+		<meta property="og:title" 			content="Use Radio Input to Change Content">
+		<meta property="og:url" 			content="http://iurianu.info/articles/selector.html">
+		<meta property="og:category" 		content="Webpage">
+	    <meta property="og:type" 			content="article">
+	    <meta property="og:description"   	content="Article: Javascript | HTML">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" media="all" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main-styles.css">
+		<link rel="stylesheet" type="text/css" href="css/article-style.css">
+		
+		<!-- EXTERNAL FONTS -->
+		<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
+		<!--[if lt IE 9]>
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+	</head>
+	<body itemscope itemtype="http://www.schema.org/Webpage">
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>  
+	window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '621204754686610',
+	  status 	 : true,
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+	<header class="container-fluid">
+
+	</header>
+
+	<main class="container clearfix" itemscope itemtype="http://www.schema.org/Article">
+		<article class="col-sm-10 col-md-10 clearfix" lang="en" dir="ltr" itemprop="articleBody">
+		<meta itemprop="author" content="Iulian Andriescu">
+		<meta itemprop="dateCreated" content="2015-10-28">
+		<meta itemprop="datePublished" content="2015-10-28">
+		<img class="my-avatar" src="http://iurianu.info/img/ia.png" alt="Iulian Andriescu" title="Iulian Andriescu" itemprop="image">
+		<h1 class="center" itemprop="headline">Use Radio Input to Change Content</h1>
+		
+		<time class="center" itemprop="datePublished" datetime="2015-10-28">October 28, 2015</time>
+		
+		<p itemprop="description" class="keywords">Keywords: <span itemprop="keywords">HTML Tables, Radio input, JavaScript, HTML5</span></p>
+
+		<h2>Statement</h2>
+		<p itemprop="articleSection">When you select the car model and click ok, you get the image of the car. All this must be done using tables.</p><br> 
+		<br>
+		<h2>Answer</h2>
+		<table id="selectorWrapper">
+			<th id="selectHeadline" colspan="2" itemprop="headline">Car Selector</th>
+			<tr>				
+				<td rowspan="2" id='carSelector' cellpadding="3">
+					<figure id="audiTab" class="visible">
+						<h2>Audi A6</h2>
+						<img src="http://srv2.betterparts.org/images/audi-q4-06.jpg" alt="Audi">
+						<figcaption>
+						<ul class="car-attributes">
+							<li>Production year: <span class="prod-date">2011</span></li>
+							<li>Engine: <span class="engine">2.5 TDI 10v</span></li>
+							<li>Transmission: <span class="transmission">6-speed manual</span></li>
+						</ul>
+						</figcaption>
+					</figure>
+					<figure id="bmwTab" class="hidden">
+						<h2>BMW X3</h2>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/2015_BMW_X3_%28F25_LCI%29_xDrive20d_wagon_%282015-06-27%29.jpg/1920px-2015_BMW_X3_%28F25_LCI%29_xDrive20d_wagon_%282015-06-27%29.jpg" alt="BMW">
+						<figcaption>
+						<ul class="car-attributes">
+							<li>Production year: <span class="prod-date">2012</span></li>
+							<li>Engine: <span class="engine">1,997 cc (121.9 cu in)</span></li>
+							<li>Transmission: <span class="transmission">6-speed manual</span></li>
+						</ul>
+						</figcaption>
+					</figure>
+					<figure id="fiatTab" class="hidden">
+						<h2>Fiat Freemont</h2>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/2013_Fiat_Freemont_%28JF%29_Lounge_wagon_%282015-06-08%29_01.jpg/1920px-2013_Fiat_Freemont_%28JF%29_Lounge_wagon_%282015-06-08%29_01.jpg" alt="Fiat">
+						<figcaption>
+						<ul class="car-attributes">
+							<li>Production year: <span class="prod-date">2009</span></li>
+							<li>Engine: <span class="engine">3.5 L EGG V6</span></li>
+							<li> Transmission: <span class="transmission">6-speed Ultradrive 62TE automati</span></li>
+						</ul>
+						</figcaption>
+					</figure>					
+				</td>
+				<td id="optionSelector">
+					<table cellpadding="10">
+						<tr>
+							<td><span class="table-text">Select a car model</span></td>
+						</tr>
+						<tr>
+							<td>
+								<form action="javascript:void(0)">
+									<input type="radio" id="Audi" name="car" value="Audi" checked>Audi
+									<br>
+									<input type="radio" id="BMW" name="car" value="BMW">BMW
+									<br>
+									<input type="radio" id="Fiat" name="car" value="Fiat">Fiat
+									<br><br>
+									<button type="submit" onClick="loadCar();">Submit</button>
+								</form> 
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+		<h2>Solution</h2>
+	<pre itemprop="exampleOfWork">
+<span class="tag">function</span> loadCar<span class="brackets">() {</span>
+	<span class="tag">if</span> <span class="brackets">(</span>document.getElementById<span class="brackets">(</span><span class="element">"Audi"</span><span class="brackets">)</span>.checked == <span class="tag">true</span><span class="brackets">) {</span>
+		document.getElementById<span class="brackets">(</span><span class="element">"audiTab"</span><span class="brackets">)</span>.className = <span class="element">"visible"</span>;
+		document.getElementById<span class="brackets">(</span><span class="element">"bmwTab"</span><span class="brackets">)</span>.className = <span class="element">"hidden"</span>;
+		document.getElementById<span class="brackets">(</span><span class="element">"fiatTab"</span><span class="brackets">)</span>.className = <span class="element">"hidden"</span>;
+	<span class="brackets">}</span>
+	<span class="tag">if</span> <span class="brackets">(</span>document.getElementById<span class="brackets">(</span><span class="element">"BMW"</span><span class="brackets">)</span>.checked == <span class="tag">true</span><span class="brackets">) {</span>
+		document.getElementById<span class="brackets">(</span><span class="element">"audiTab"</span><span class="brackets">)</span>.className = <span class="element">"hidden"</span>;
+		document.getElementById<span class="brackets">(</span><span class="element">"bmwTab"</span><span class="brackets">)</span>.className = <span class="element">"visible"</span>;
+		document.getElementById<span class="brackets">(</span><span class="element">"fiatTab"</span><span class="brackets">)</span>.className = <span class="element">"hidden"</span>;
+	<span class="brackets">}</span>
+	<span class="tag">if</span> <span class="brackets">(</span>document.getElementById<span class="brackets">(</span><span class="element">"Fiat"</span><span class="brackets">)</span>.checked == <span class="tag">true</span><span class="brackets">) {</span>
+		document.getElementById<span class="brackets">(</span><span class="element">"audiTab"</span><span class="brackets">)</span>.className = <span class="element">"hidden"</span>;
+		document.getElementById<span class="brackets">(</span><span class="element">"bmwTab"</span><span class="brackets">)</span>.className = <span class="element">"hidden"</span>;
+		document.getElementById<span class="brackets">(</span><span class="element">"fiatTab"</span><span class="brackets">)</span>.className = <span class="element">"visible"</span>;
+	<span class="brackets">}</span>
+<span class="brackets">}</span>	
+	</pre>
+
+		<h2>Explanation</h2>
+		
+		<ul class="explanation">
+			<li>* The <em>checked</em> property sets or returns the checked state of a checkbox.</li>
+			<li>* The <em>className</em> property sets or returns the class name of an element.</li>
+		</ul>
+
+		<br />
+
+			<div id="socialBox">
+				<a class="twitter-share-button" data-size="default" data-count="horizontal" href="https://twitter.com/intent/tweet">Tweet</a><br>
+				<span class="fb-share-button" data-layout="button_count"></span><br>
+				<span class="fb-like" data-href="http://www.iurianu.info/articles/selector.html" data-layout="button_count" data-action="like"></span><br>
+				<span class="g-plusone" data-size="tall" data-annotation="none"></span><br>												
+			</div>
+			<div id="commentBox">
+				<span class="fb-comments" data-href="http://iurianu.info/articles/selector.html" data-colorscheme="light"	data-order-by="social" data-width="100%" data-numposts="10"></span>
+			</div>
+		</article>
+		
+		<nav id="sidebar" class="col-sm-2 col-md-2 clearfix" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+		</nav>
+		
+	</main>
+
+	<footer class="container-fluid">
+	
+	</footer>
+
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'en'}
+</script>
+<script>
+
+// Radio input selector
+
+function loadCar() {
+	if (document.getElementById("Audi").checked == true) {
+		document.getElementById("audiTab").className = "visible";
+		document.getElementById("bmwTab").className = "hidden";
+		document.getElementById("fiatTab").className = "hidden";
+	}
+	else if	(document.getElementById("BMW").checked == true) {
+		document.getElementById("audiTab").className = "hidden";
+		document.getElementById("bmwTab").className = "visible";
+		document.getElementById("fiatTab").className = "hidden";
+	}
+	else if (document.getElementById("Fiat").checked == true) {
+		document.getElementById("audiTab").className = "hidden";
+		document.getElementById("bmwTab").className = "hidden";
+		document.getElementById("fiatTab").className = "visible";
+	}
+}
+
+
+jQuery.noConflict();
+	jQuery(document).ready(function() {
+		jQuery("header").load("header.html", function(){
+		   document.querySelector( "#nav-toggle" )
+			.addEventListener( "click", function() {
+				this.classList.toggle( "active" );
+			});
+		});
+		jQuery("footer").load("footer.html");
+		jQuery("nav#sidebar").load("sidebar.html");
+	});
+</script>
+</body>
+</html>

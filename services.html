@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Webpage">
+	<head>
+
+		<!-- HTML META TAGS -->
+		<meta http-equiv="X-UA-Compatible" 		content="IE=edge">
+		<meta http-equiv="content-type" 		content="text/html; charset=UTF-8">
+		<meta name="viewport" 					content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="HandheldFriendly" 			content="true">
+		<meta name="author" 					content="Iulian Andriescu">
+		<meta name="description" 				content="Personal Webpage">
+		<meta name="keywords" 					content="iurianu, HTML5, CSS3, SASS, SCSS, PostCSS, Gulp, JavaScript, jQuery">
+		<meta name="robots"						content="index, follow">
+		<meta name="google-site-verification" 	content="053d724d822b7cbb" href="google053d724d822b7cbb.html">
+
+		<title>Iulian Andriescu</title>
+
+		<!-- PROFILE DESCRIPTION -->
+		<link rel="author" 			href="https://plus.google.com/103842049134044348018/">
+		<link rel="profile" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="publisher" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="icon" 			href="images/favicon.png" type="image/png">
+		<link rel="shortcut icon" 	href="images/favicon.png" type="image/png">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" media="all" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+		<link rel="stylesheet" type="text/css" href="css/main-styles.css">
+		<link rel="stylesheet" type="text/css" href="css/services-styles.css">
+		
+		<!-- EXTERNAL FONTS -->
+		<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
+		<!--[if lt IE 9]>
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+
+	</head>
+	<body itemscope itemtype="https://schema.org/Person">
+
+		<header class="container-fluid">
+
+		</header>
+
+		<main class="container-fluid">
+				<section class="clearfix" itemscope itemtype="https://schema.org/CollectionPage">
+					<div class="container">
+						<h1>Services</h1>
+						<div class="restmenuwrap">
+							<h2  itemprop="headline">Webpage Development</h2>
+							<div class="restitem" itemprop="specialty">
+								<h3 itemprop="headline">HTML5 / CSS3</h3>
+								<p class="description" itemprop="description">Hand-written code: all the new features in the HTML5/CSS3 technology.</p>
+								<h3 itemprop="headline">SASS/SCSS</h3>
+								<p class="description" itemprop="description">Clean and readable stylesheets created with SASS/SCSS preprocessor.</p>
+								<h3 itemprop="headline">Twitter Bootsatrap</h3>
+								<p class="description" itemprop="description">Perfect grids created with Twitter Bootstrap Framework.</p>
+								<h3 itemprop="headline">JavaScript/jQuery</h3>
+								<p class="description" itemprop="description">Best functionality one could get for a website.</p>
+							</div>
+						</div>
+					</div>	
+				</section>
+				<section class="clearfix" itemscope itemtype="https://schema.org/CollectionPage">
+					<div class="container">
+						<div class="restmenuwrap">
+							<h2  itemprop="headline">On-page Optimization</h2>
+							<div class="restitem" itemprop="specialty">
+								<h3 itemprop="headline">Schema.org Markup</h3>
+								<p class="description" itemprop="description">I use schema.org markup (item microdata) to created the best experience while using <em title="Google, Yahoo and Bing">Search Engines</em>.</p>								
+							</div>
+						</div>
+					</div>	
+				</section>
+				<section class="clearfix" itemscope itemtype="https://schema.org/CollectionPage">
+					<div class="container">
+						<div class="restmenuwrap">
+							<h2  itemprop="headline">Google+, Twitter and Facebook API Integration</h2>
+							<div class="restitem" itemprop="specialty">
+								<h3 itemprop="headline">Like and Share Buttons</h3>
+								<p class="description" itemprop="description">I make API integration, to add Twitter, Google and/or Facebook Like and Share Buttons on Pages.</p>								
+							</div>
+						</div>
+					</div>	
+				</section>
+		</main>
+
+		<footer class="container-fluid">
+		
+		</footer>
+
+	<!-- SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-69303137-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+	<script>
+		jQuery.noConflict();
+		jQuery(document).ready(function() {
+		    jQuery("header").load("header.html", function(){
+			   document.querySelector( "#nav-toggle" )
+		        .addEventListener( "click", function() {
+		            this.classList.toggle( "active" );
+		        });
+		    });
+		    jQuery("footer").load("footer.html");
+		});
+	</script>
+	</body>
+</html>

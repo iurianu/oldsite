@@ -1,0 +1,20 @@
+<div class="container">
+	<span id="headerLogoText">iurianu</span>
+	<a id="nav-toggle" href="#" data-target="#breadcrumb" data-toggle="expand"><span role="button"></span></a>	
+	<ul id="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+		<li itemprop="itemListElement"><a href="index.html" 	itemprop="url">Home</a></li>
+		<li itemprop="itemListElement"><a href="services.html" 	itemprop="url">Services</a></li>
+		<li itemprop="itemListElement"><a href="portfolio.html" itemprop="url">Portfolio</a></li>
+		<li itemprop="itemListElement"><a href="articles.html" 	itemprop="url">Articles</a></li>
+		<li itemprop="itemListElement"><a href="resume.html" 	itemprop="url">Resume</a></li>
+		<li itemprop="itemListElement"><a href="mailto:iulianandriescu@gmail.com" itemprop="url">Contact</a></li>
+	</ul>
+	<script>
+		jQuery.noConflict();
+		jQuery(document).ready(function() {
+			   	jQuery("#nav-toggle").click(function() {
+		        	jQuery("#breadcrumb").toggleClass("expanded");
+		    });
+		});
+	</script>		
+</div>

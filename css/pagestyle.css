@@ -1,0 +1,189 @@
+
+/* GENERAL STYLES */
+
+* {margin: 0; padding: 0; font-family:"Slabo 27px", serif;}
+
+html {height: 100%;}
+
+body {
+	background-color: -webkit-radial-gradient(#FFFFFF, #e7e8ea, #c4c5ca, #575865, #1b1b2d);
+  background-color: -o-radial-gradient(#FFFFFF, #e7e8ea, #c4c5ca, #575865, #1b1b2d);
+  background-color: -moz-radial-gradient(#FFFFFF, #e7e8ea, #c4c5ca, #575865, #1b1b2d);
+  background-color: radial-gradient(#FFFFFF, #e7e8ea, #c4c5ca, #575865, #1b1b2d);
+	background-size: auto;
+}
+
+ul, li {display: block; list-style: none;}
+
+a, a:link, a:hover, a:focus, a:active, a:visited, a.active {
+	padding: 5px 10px; 
+	border: 1px solid transparent; 
+	font: inherit;
+	text-decoration: none;
+}
+
+h1 {
+	font-family: 'Lora', serif;
+	color: #333;
+	float: left;
+}
+
+h1.header {color: #fff;}
+
+h4 {font-style: italic;}
+
+@media screen and (max-width: 480px){
+	h1 {font-size: 20px;}
+	h2 {font-size: 15px; font-weight: bold;}
+	h4 {font-size: 15px; font-weight: bold;}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+	h1 {font-size: 25px;}
+	h2 {font-size: 20px; font-weight: bold;}
+	h4 {font-size: 16px;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+	h1 {font-size: 30px; padding-left: 10px;}
+	h2 {font-size: 25px;}
+	h4 {font-size: 17px;}
+}
+
+@media screen and (min-width: 993px){
+	h1 {font-size: 35px; padding-left: 10px;}
+	h2 {font-size: 30px;}
+	h4 {font-size: 18px;}
+}
+
+/* TOP NAVIGATION BAR STYLES */
+
+.navbar-brand {padding: 5px;}
+
+img.logo {
+	height: 45px;
+	width: auto;
+	background-color: #fff;
+	border: 1px solid #2d2d2a;
+	border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+}
+
+img.logo:hover {filter: blur(1px); -webkit-filter: blur(1px); -moz-filter: blur(1px); -o-filter: blur(1px); -ms-filter: blur(1px);}
+
+ul#navigation-top {margin-top: 15px;}
+
+ul#navigation-top li {
+	display: inline;
+	list-style-type: none;
+	font-size: 14px;
+	padding: 2px 10px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px){
+	ul#navigation-top li {float: right;}
+}
+
+ul#navigation-top li a:active, 
+ul#navigation-top li a:visited {
+	font-family: 'Slabo 27px', serif;
+	color: #9d9d9d;
+	background-color: #2d2d2a;
+	padding: 5px 10px;
+	border: 1px solid #2d2d2a;
+	border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+	box-sizing: border-box;
+}
+
+ul#navigation-top li a:hover, 
+ul#navigation-top li a:focus,
+ul#navigation-top li a.active {
+	font-family: 'Slabo 27px', serif;
+	color: #fff;
+	background-color: transparent;
+	padding: 5px 10px;
+	border: 1px solid #fff;
+	border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+	box-sizing: border-box;
+}
+
+/* MAIN CONTENT STYLES */
+
+main {
+	margin-top: 50px;
+	margin-bottom: 65px;
+}
+
+a.accordion-link {cursor: pointer;}
+
+a.accordion-link:active {
+	background-color: transparent;
+	padding: 0;
+	border: none;
+	font-size: 14px;
+	line-height: 1.42857;
+}
+
+.list-group-item {padding: 0;}
+
+[itemprop='dateCreated'] {
+	padding-left: 20px;
+	font-size: 12px;
+}
+
+/* VIDEO EMBED STYLES */
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	width: 90%;
+	height: 0;
+	margin: 0 auto;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* BOTTOM NAVIGATION BAR STYLES */
+
+.navbar-fixed-bottom {	height: 65px;}
+
+p.copyright {
+	color: #fff;
+	padding-top: 15px;
+}
+
+/* PROJECT STYLES */
+
+.workdescription {
+	padding-bottom: 15px;
+}
+
+/* PRE & CODE STYLES */
+
+pre.snippet{max-height: 250px;}
+.pre-headline {padding-bottom:5px;font-style:bold;color:#337ab7;text-transform:uppercase;text-decoration:underline;}
+.pre-htm, .pre-function {color:#0000FF;}
+.pre-schema{color:#990033;}
+.pre-function{font-style:italic;}
+.pre-tag, .pre-class {color:red;}
+.pre-attribute {color:indigo;font-style:bold;}
+.pre-import {color:#0099FF;font-style:bold;}
+.pre-comment {color:green;}
+.pre-id {color:#336699;font-style:bold;}
+.pre-css{color:red;}
+.pre-css-tag {color:blue;}
+.pre-css-attr {color:#0066CC;font-style:bold;}
+.pre-css-pseudo {color:orange;font-style:bold;}
+.pre-css-ps2 {color:#FFA347;}
+.pre-this {color: grey;}
+
+/* CLEARFIX */
+
+.clear {clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}* html .clearfix{height:1%;}html[xmlns] .clearfix {display:block;}.clearfix{display:inline-block;}.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}

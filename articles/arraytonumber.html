@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Webpage">
+	<head>
+
+		<!-- HTML META TAGS -->
+		<meta http-equiv="X-UA-Compatible" 		content="IE=edge">
+		<meta http-equiv="content-type" 		content="text/html; charset=UTF-8">
+		<meta name="viewport" 					content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="HandheldFriendly" 			content="true">
+		<meta name="author" 					content="Iulian Andriescu">
+		<meta name="description" 				content="Array To Number">
+		<meta name="keywords" 					content="iurianu, HTML5, CSS3, SASS, SCSS, JavaScript, jQuery, User Experience, Interaction Design, Application Development, Browsers, CSS, HTML, State of the Web, Mobile/Multidevice">
+		<meta name="robots"						content="index, follow">
+		<meta name="google-site-verification" 	content="053d724d822b7cbb" href="google053d724d822b7cbb.html">
+
+		<title>Array to Number</title>
+
+		<!-- PROFILE DESCRIPTION -->
+		<link rel="author" 			href="https://plus.google.com/103842049134044348018/">
+		<link rel="profile" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="publisher" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="icon" 			href="../images/favicon.png" type="image/png" itemprop="primaryImageOfPage">
+		<link rel="shortcut icon" 	href="../images/favicon.png" type="image/png" itemprop="image">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" media="all" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main-styles.css">
+		<link rel="stylesheet" type="text/css" href="css/article-style.css">
+		
+		<!-- EXTERNAL FONTS -->
+		<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
+		<!--[if lt IE 9]>
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+	</head>
+	<body itemscope itemtype="http://www.schema.org/Webpage">
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>  
+	window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '621204754686610',
+	  status 	 : true,
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+	<header class="container-fluid">
+
+	</header>
+
+	<main class="container clearfix" itemscope itemtype="http://www.schema.org/Article">
+		<article class="col-sm-10 col-md-10 clearfix" lang="en" dir="ltr" itemprop="articleBody">
+		<meta itemprop="author" content="Iulian Andriescu">
+		<meta itemprop="dateCreated" content="2015-10-27">
+		<meta itemprop="datePublished" content="2015-10-27">
+		<img class="my-avatar" src="http://iurianu.info/img/ia.png" alt="Iulian Andriescu" title="Iulian Andriescu" itemprop="image">
+		<h1 class="center" itemprop="headline name">Extract the greatest number possible from the digits in a given array</h1>
+		
+		<time class="center" itemprop="datePublished" datetime="2015-10-27">October 27, 2015</time>
+		
+		<p itemprop="description" class="keywords">Keywords:<span itemprop="keywords"> JavaScript, HTML5</span></p>
+				
+		<h2>Statement</h2>
+		<p itemprop="articleSection">You have an array consisting of only digits, i.e.:
+			<span class="example">Array = ["1", "8", "6", "3", "9"]</span></p>
+		<p itemprop="articleSection">Create a function to get the greatest number that could be obtained using the elements in the array, i.e., from<br>
+			<span class="example">Array = ["1", "8", "6", "3", "9"]</span> you will get the number <span class="example">98631</span>.</p>
+		<br>
+		<h2>Answer</h2>
+		<p itemprop="articleSection">Click the button to spin the elements and get the greatest number possible to be created with the array elements.</p><br>
+		<p itemprop="articleSection">The given array is ["1", "6", "2", "8"].</p>
+
+		<button onclick="myFunction(myArray)">Get the result</button>
+
+		<p itemprop="articleSection">The resulting number is: <span id="arrayDemo" class="result-demo">?</span></p>
+
+
+		<h2>Solution</h2>
+		
+<!-- START THE JAVASCRIPT CODE FOR THE EXERCISE -->
+
+	<pre>
+<span class="tag">var</span> myArray = <span class="brackets">[</span><span class="element">"1"</span>, <span class="element">"6"</span>, <span class="element">"2"</span>, <span class="element">"8"</span><span class="brackets">]</span>;
+
+<span class="tag">function</span> myFunction<span class="brackets">(</span>a<span class="brackets">)</span> <span class="brackets">{</span>
+	<span class="tag">var</span> arr = a.sort<span class="brackets">()</span>.reverse<span class="brackets">()</span>.toString<span class="brackets">()</span>.split<span class="brackets">(</span><span class="element">","</span><span class="brackets">)</span>.join<span class="brackets">(</span><span class="element">""</span><span class="brackets">)</span>;
+	<span class="tag">var</span> number = Number<span class="brackets">(</span>arr<span class="brackets">)</span>;
+	document.getElementById<span class="brackets">(</span><span class="element">"arrayDemo"</span><span class="brackets">)</span>.innerHTML = number;
+<span class="brackets">}</span>
+	</pre>
+			
+<!-- END THE JAVASCRIPT CODE FOR THE EXERCISE -->
+
+		<h2>Explanation</h2>
+		<ul class="explanation">
+			<li>* The <em>sort()</em> method sorts the values as strings in alphabetical and ascending order.</li>
+			<li>* The <em>reverse()</em> method reverses the order of the elements in an array.</li>
+			<li>* The <em>toString()</em> method converts a number to a string.</li>
+			<li>* The <em>split()</em> method is used to split a string into an array of substrings, and returns the new array.</li>
+			<li>* The <em>join()</em> method joins the elements of an array into a string, and returns the string.</li>
+			<li>* The <em>Number()</em> method converts the string into a number.</li>
+		</ul>
+
+		<br />
+
+			<div id="socialBox">
+				<a class="twitter-share-button" data-size="default" data-count="horizontal" href="https://twitter.com/intent/tweet">Tweet</a><br>
+				<span class="fb-share-button" data-layout="button_count"></span><br>
+				<span class="fb-like" data-href="http://www.iurianu.info/articles/arraytonumber.html" data-layout="button_count" data-action="like"></span><br>
+				<span class="g-plusone" data-size="tall" data-annotation="none"></span><br>												
+			</div>
+			<div id="commentBox">
+				<span class="fb-comments" data-href="http://iurianu.info/articles/arraytonumber.html" data-colorscheme="light"	data-order-by="social" data-width="100%" data-numposts="10"></span>
+			</div>
+		</article>
+		
+		<nav id="sidebar" class="col-sm-2 col-md-2 clearfix" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+		</nav>
+		
+	</main>
+
+	<footer class="container-fluid">
+	
+	</footer>
+
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'en'}
+</script>
+<script>
+
+// Convert Array to number
+
+var myArray = ["1", "6", "2", "8"];
+
+function myFunction(a) {
+	var arr = a.sort().reverse().toString().split(",").join("");
+	var number = Number(arr);
+	document.getElementById("arrayDemo").innerHTML = number;
+}
+
+
+jQuery.noConflict();
+	jQuery(document).ready(function() {
+		jQuery("header").load("header.html", function(){
+		   document.querySelector( "#nav-toggle" )
+			.addEventListener( "click", function() {
+				this.classList.toggle( "active" );
+			});
+		});
+		jQuery("footer").load("footer.html");
+		jQuery("nav#sidebar").load("sidebar.html");
+	});
+</script>
+</body>
+</html>

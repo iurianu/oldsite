@@ -1,0 +1,77 @@
+/* STYLES FOR THE MAIN CONTENT */
+
+main {
+	display: block;
+	background-color: transparent;
+}
+
+.wrapper {
+  height: 100%;
+/*  margin-top: 30px;
+  padding-top: 25px; */
+	background-color: #ffffff;
+}
+
+@media screen and (max-width: 480px){
+	.wrapper {
+		padding-right: 10px;
+		padding-left: 10px;
+		padding-bottom: 70px;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+	.wrapper {
+		padding-right: 10px;
+		padding-left: 10px;
+		padding-bottom: 70px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+	.wrapper {
+		padding-right: 25px;
+		padding-left: 25px;
+		padding-bottom: 60px;
+	}
+}
+
+@media screen and (min-width: 993px){
+/*	.wrapper {
+		padding-right: 25px;
+		padding-left: 25px;
+		padding-bottom: 60px; */
+	}
+}
+
+.screenshot {
+	width: 100%;
+	height: auto;
+}
+
+pre, samp {
+	overflow-x: auto; 
+	word-wrap: normal; 
+	word-break: keep-all;
+}
+
+/* PROJECT FILE STYLES */
+
+article.modal-dialog {width: 100%;}
+
+.project-content {
+	position: relative;
+	background-clip: padding-box;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	outline: 0 none;
+}
+
+.project-body {
+	position: relative;
+	display: block;
+	overflow-x: auto;
+	padding: 15px;
+}

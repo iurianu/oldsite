@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Webpage">
+	<head>
+
+		<!-- HTML META TAGS -->
+		<meta http-equiv="X-UA-Compatible" 		content="IE=edge">
+		<meta http-equiv="content-type" 		content="text/html; charset=UTF-8">
+		<meta name="viewport" 					content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="HandheldFriendly" 			content="true">
+		<meta name="author" 					content="Iulian Andriescu">
+		<meta name="description" 				content="Algorithm to generate an array of random numbers">
+		<meta name="keywords" 					content="iurianu, HTML5, CSS3, SASS, SCSS, JavaScript, User Experience, Interaction Design, Application Development, CSS, HTML, Mobile/Multidevice">
+		<meta name="robots"						content="index, follow">
+
+		<title>Array with Random Numbers</title>
+
+		<!-- PROFILE DESCRIPTION -->
+		<link rel="author" 			href="https://plus.google.com/103842049134044348018/">
+		<link rel="profile" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="publisher" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="icon" 			href="../images/favicon.png" type="image/png" itemprop="primaryImageOfPage">
+		<link rel="shortcut icon" 	href="../images/favicon.png" type="image/png" itemprop="image">
+		<meta name="twitter:card"				content="summary_large_image">
+		<meta name="twitter:title" 				content="">
+		<meta name="twitter:creator" 			content="Iulian Andriescu">
+		<meta name="twitter:site" 				content="http://iurianu.info/articles/randomnumbers.hmtl">
+		<meta name="twitter:image" 				content="http://iurianu.info/img/ia.jpg">
+		<meta name="twitter:description" 		content="Algorithm to generate an array of random numbers">
+		<meta property="og:image" 			content="http://iurianu.info/img/ia.jpg">
+		<meta property="og:title" 			content="An Array with Random Numbers">
+		<meta property="og:url" 			content="http://iurianu.info/articles/randomnumbers.html">
+		<meta property="og:category" 		content="Webpage">
+	    <meta property="og:type" 			content="article">
+	    <meta property="og:description"   	content="Article: Javascript">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" media="all" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main-styles.css">
+		<link rel="stylesheet" type="text/css" href="css/article-style.css">
+		
+		<!-- EXTERNAL FONTS -->
+		<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
+		<!--[if lt IE 9]>
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+	</head>
+	<body itemscope itemtype="http://www.schema.org/Webpage">
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+
+	<header class="container-fluid">
+
+	</header>
+
+	<main class="container clearfix" itemscope itemtype="http://www.schema.org/Article">
+		<article class="col-sm-10 col-md-10 clearfix" lang="en" dir="ltr" itemprop="articleBody">
+		<meta itemprop="author" content="Iulian Andriescu">
+		<meta itemprop="dateCreated" content="2015-10-29">
+		<meta itemprop="datePublished" content="2015-10-29">
+		<img class="my-avatar" src="http://iurianu.info/img/ia.png" alt="Iulian Andriescu" title="Iulian Andriescu" itemprop="image">
+		<h1 class="center" itemprop="headline name">An Algorithm to Create an Array of Random Numbers</h1>
+		
+		<time class="center" itemprop="datePublished" datetime="2015-10-29">October 29, 2015</time>
+		
+		<p itemprop="description" class="keywords">Keywords: <span itemprop="keywords">Array, JavaScript, HTML5</span></p>
+
+		<h2>Statement</h2>
+		
+			<p itemprop="articleSection">Write an algorithm that returns an array containing 50 random numbers.</p>
+			<h2>Answer</h2>
+			<p itemprop="articleSection">Clicking the button will show an Array of 50 random numbers between 1 and 100 in a new Window Object</p>
+			<p itemprop="articleSection">Push the button to return the array:</p>
+			<button onclick="arrayFifty(50)">Get the Array</button>			
+			<blockquote class="result-tab">
+    			<span id="arrP"></span></p>
+			</blockquote>
+		<h2>Solution</h2>
+			
+<!-- START THE JAVASCRIPT CODE FOR THE EXERCISE -->
+
+	<pre itemprop="exampleOfWork">
+<span class="tag">function</span> arrayFifty<span class="brackets">(</span>n<span class="brackets">) {</span>
+<span class="tag">var</span> arr = <span class="brackets">[]</span>
+<span class="tag">while</span> <span class="brackets">(</span>arr.length < n<span class="brackets">){</span>
+  <span class="tag">var</span> randomnumber = Math.ceil<span class="brackets">(</span>Math.random<span class="brackets">()</span>*<span class="values">100</span><span class="brackets">)</span>
+  <span class="tag">var</span> found = <span class="values">false</span>;
+  <span class="tag">for</span> <span class="brackets">(</span><span class="tag">var</span> i = <span class="values">0</span>; i < arr.length; i++<span class="brackets">){</span>
+    <span class="tag">if</span> <span class="brackets">(</span>arr<span class="brackets">[</span>i<span class="brackets">]</span> == randomnumber<span class="brackets">){</span>
+    	found = <span class="values">true</span>;
+    	<span class="tag">break</span>;
+    <span class="brackets">}</span>
+  <span class="brackets">}</span>
+  <span class="tag">if</span> <span class="brackets">(</span>!found<span class="brackets">)</span>arr<span class="brackets">[</span>arr.length<span class="brackets">]</span> = randomnumber;
+<span class="brackets">}</span>
+    document.getElementById<span class="brackets">(</span>"arrP"<span class="brackets">)</span>.innerHTML = arr;
+<span class="brackets">}</span>	
+	</pre>
+
+<!-- END THE JAVASCRIPT CODE FOR THE EXERCISE -->
+		
+		<h2>Explanation</h2>
+		<ul class="explanation">
+			<li>* The <em>length</em> property sets or returns the number of elements in an array.</li>
+			<li>* The <em>ceil()</em> method rounds a number UPWARDS to the nearest integer, and returns the result.</li>
+			<li>* The <em>random()</em> method returns a random number from 0 (inclusive) up to but not including 1 (exclusive).</li>
+			<li>* The <em>return</em> statement stops the execution of a function and returns a value from that function.</li>
+		</ul>
+
+		<br />	
+			<div id="socialBox">
+				<a class="twitter-share-button" data-size="default" data-count="horizontal" href="https://twitter.com/intent/tweet">Tweet</a><br>
+				<span class="fb-share-button" data-layout="button_count"></span><br>
+				<span class="fb-like" data-href="http://www.iurianu.info/articles/randomnumbers.html" data-layout="button_count" data-action="like"></span><br>
+				<span class="g-plusone" data-size="tall" data-annotation="none"></span><br>												
+			</div>
+			<div id="commentBox">
+				<span class="fb-comments" data-href="http://iurianu.info/articles/randomnumbers.html" data-colorscheme="light"	data-order-by="social" data-width="100%" data-numposts="10"></span>
+			</div>
+		</article>
+		
+		<nav id="sidebar" class="col-sm-2 col-md-2 clearfix" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+		</nav>
+		
+	</main>
+
+	<footer class="container-fluid">
+	
+	</footer>
+
+<!-- SCRIPTS -->
+<script>  
+	window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '621204754686610',
+	  status 	 : true,
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'en'}
+</script>
+<script>
+
+// The Fibonacci Sequence
+
+function arrayFifty(n) {
+var arr = []
+while(arr.length < n){
+  var randomnumber = Math.ceil(Math.random()*100)
+  var found = false;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] == randomnumber){
+    	found = true;
+    	break
+    }
+  }
+  if(!found)arr[arr.length] = randomnumber;
+}
+    document.getElementById("arrP").innerHTML = arr;
+}
+
+jQuery.noConflict();
+	jQuery(document).ready(function() {
+		jQuery("header").load("header.html", function(){
+		   document.querySelector( "#nav-toggle" )
+			.addEventListener( "click", function() {
+				this.classList.toggle( "active" );
+			});
+		});
+		jQuery("footer").load("footer.html");
+		jQuery("nav#sidebar").load("sidebar.html");
+	});
+</script>
+</body>
+</html>

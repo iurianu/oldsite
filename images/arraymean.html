@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Webpage">
+	<head>
+
+		<!-- HTML META TAGS -->
+		<meta http-equiv="X-UA-Compatible" 		content="IE=edge">
+		<meta http-equiv="content-type" 		content="text/html; charset=UTF-8">
+		<meta name="viewport" 					content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="HandheldFriendly" 			content="true">
+		<meta name="author" 					content="Iulian Andriescu">
+		<meta name="description" 				content="The Mean of Numbers in Array">
+		<meta name="keywords" 					content="iurianu, HTML5, CSS3, SASS, SCSS, JavaScript, jQuery, User Experience, Interaction Design, Application Development, Browsers, CSS, HTML">
+		<meta name="robots"						content="index, follow">
+		<meta name="google-site-verification" 	content="053d724d822b7cbb" href="google053d724d822b7cbb.html">
+
+		<title>The Mean of Numbers in an Array</title>
+
+		<!-- PROFILE DESCRIPTION -->
+		<link rel="author" 			href="https://plus.google.com/103842049134044348018/">
+		<link rel="profile" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="publisher" 		href="https://plus.google.com/103842049134044348018/">
+		<link rel="icon" 			href="../images/favicon.png" type="image/png" itemprop="primaryImageOfPage">
+		<link rel="shortcut icon" 	href="../images/favicon.png" type="image/png" itemprop="image">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" type="text/css" media="all" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main-styles.css">
+		<link rel="stylesheet" type="text/css" href="css/article-style.css">
+		
+		<!-- EXTERNAL FONTS -->
+		<link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
+		<!--[if lt IE 9]>
+		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+	</head>
+	<body itemscope itemtype="http://www.schema.org/Webpage">
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>  
+	window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '621204754686610',
+	  status 	 : true,
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+	<header class="container-fluid">
+
+	</header>
+
+	<main class="container clearfix" itemscope itemtype="http://www.schema.org/Article">
+		<article class="col-sm-10 col-md-10 clearfix" lang="en" dir="ltr" itemprop="articleBody">
+		<meta itemprop="author" content="Iulian Andriescu">
+		<meta itemprop="dateCreated" content="2015-10-29">
+		<img class="my-avatar" src="http://iurianu.info/img/ia.png" alt="Iulian Andriescu" title="Iulian Andriescu" itemprop="image">
+		<h1 class="center" itemprop="headline name">The Mean of the Numbers in an Array</h1>
+		
+		<time class="center" itemprop="datePublished" datetime="2015-10-29">October 29, 2015</time>
+		
+		<p itemprop="description" class="keywords">Keywords: <span itemprop="keywords">Algorithm, Array, JavaScript, HTML5</span></p>
+				
+		<h2>Statement</h2>
+		<p itemprop="articleSection">Write an algorithm that calculates the mean of the numbers in an array.</p>
+		<p itemprop="articleSection">Example:<br>For an Array = [1, 34, 23, 12, 6, 3]<br>you will get the mean: 13.166666666666666</p>
+
+		<br>
+		<h2>Answer</h2>
+		<p itemprop="articleSection">For a given array: myArray = [4, 58, 23, 12, 6, 31],<br>
+    		the mean is: <span id="arrMean" class="result-demo">?</span></p>
+
+    	<button onclick="avgSum()">Get the Result</button><br><br>
+
+		<h2>Solution</h2>
+	<pre>		
+<span class="tag">function</span> avgSum<span class="brackets">(){</span>
+   <span class="tag">var</span> myArray = <span class="brackets">[</span><span class="element">4</span>, <span class="element">58</span>, <span class="element">23</span>, <span class="element">12</span>, <span class="element">6</span>, <span class="element">31</span><span class="brackets">]</span>;
+   <span class="tag">var</span> total = <span class="values">0</span>;
+     <span class="tag">for</span> <span class="brackets">(</span><span class="tag">var</span> i = <span class="element">0</span>; i < myArray.length; i++<span class="brackets">) {</span>
+         total += myArray<span class="brackets">[</span>i<span class="brackets">]</span>
+     <span class="brackets">}</span>
+    <span class="tag">var</span> avg = total/myArray.length;
+    document.getElementById<span class="brackets">(</span>"arrMean"<span class="brackets">)</span>.innerHTML = avg;
+ <span class="brackets">}</span>
+ 	</pre>
+
+		<h2>Explanation</h2>
+		<ul class="explanation">
+			<li>* The <em>length</em> property sets or returns the number of elements in an array.</li>
+		</ul>
+
+		<br />
+
+			<div id="socialBox">
+				<a class="twitter-share-button" data-size="default" data-count="horizontal" href="https://twitter.com/intent/tweet">Tweet</a><br>
+				<span class="fb-share-button" data-layout="button_count"></span><br>
+				<span class="fb-like" data-href="http://www.iurianu.info/articles/arraymean.html" data-layout="button_count" data-action="like"></span><br>
+				<span class="g-plusone" data-size="tall" data-annotation="none"></span><br>												
+			</div>
+			<div id="commentBox">
+				<span class="fb-comments" data-href="http://iurianu.info/articles/arraymean.html" data-colorscheme="light"	data-order-by="social" data-width="100%" data-numposts="10"></span>
+			</div>
+		</article>
+		
+		<nav id="sidebar" class="col-sm-2 col-md-2 clearfix" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+		</nav>
+		
+	</main>
+
+	<footer class="container-fluid">
+	
+	</footer>
+
+<!-- SCRIPTS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'en'}
+</script>
+<script>
+
+// Get the average of the numbers in the array
+
+function avgSum(){
+   var myArray = [4, 58, 23, 12, 6, 31];
+   var total = 0;
+     for (var i = 0; i < myArray.length; i++) {
+         total += myArray[i]
+     }
+    var avg = total/myArray.length;
+    document.getElementById("arrMean").innerHTML = avg;
+ }
+
+jQuery.noConflict();
+	jQuery(document).ready(function() {
+		jQuery("header").load("header.html", function(){
+		   document.querySelector( "#nav-toggle" )
+			.addEventListener( "click", function() {
+				this.classList.toggle( "active" );
+			});
+		});
+		jQuery("footer").load("footer.html");
+		jQuery("nav#sidebar").load("sidebar.html");
+	});
+</script>
+</body>
+</html>
